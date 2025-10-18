@@ -1,4 +1,4 @@
-# HTML/CSS Code Explanations
+# REPORT LAB 02
 
 This document breaks down three different HTML/CSS exercises, explaining the "What, Why, and How" for each.
 
@@ -22,54 +22,51 @@ This code uses the **Bootstrap** CSS framework. The "why" is to build a clean, r
     * `.form-check` is used for the stacked checkboxes.
 4.  **Custom Styling:** A small `<style>` tag is used to add custom styles not covered by Bootstrap, like setting the logo width and changing the heading colors to `#1e9690`.
 
-<details>
+# HTML/CSS Code Explanations
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="[https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css)">
-    <title>Survey Form</title>
-    <style>
-        body {
-            padding: 20px;
-        }
+This document breaks down two HTML/CSS exercises, explaining the "What, Why, and How" for each.
 
-        .survey-container img {
-            width: 150px; 
-            margin-bottom: 15px;
-        }
+---
 
-        .survey-container h2 {
-            color: #1e9690;
-            padding-bottom: 10px;
-        }
+## Exercise 3: 3-Column Fixed-Width Layout
 
-        .survey-container h3 {
-            color: #1e9690; 
-            margin-top: 25px;
-            margin-bottom: 15px;
-        }
-    </style>
-</head>
-<body>
-    <div class="survey-container">
-        <img src="logo-hcmiu.png" alt="Ho Chi Minh City International University Logo">
-        <h2>Survey</h2>
-        <p>If you have a moment, we'd appreciate it if you would fill out this survey.</p>
-        <form action="" method="post">
-            <h3>Your information:</h3>
-            <div class="row">
-                <div class="col">
-                    <label for="fname">First Name:</label>
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control" id="fname" name="first_name">
-                </div>
-            </div>
-            </form>
-    </div>
-</body>
-</html>
+### What is it?
+This code creates a classic 3-column webpage layout. It features a full-width header at the top, a full-width footer at the bottom, and a middle section composed of a left sidebar (`Sidebar A`), a main content area, and a right sidebar (`Sidebar B`).
+
+### Why was it built this way?
+This code demonstrates how to create a fundamental webpage structure using modern CSS **Flexbox**. The goal is to have two **fixed-width** sidebars (200px each) and a central content area that is **fluid**, meaning it stretches to fill whatever space is left.
+
+### How does it work?
+1.  **Outer Flex Container:** The main `.container` is a **vertical** flexbox (`display: flex`, `flex-direction: column`). This stacks its children (header, content-wrapper, footer) on top of each other.
+2.  **Inner Flex Container:** The `.content-wrapper` is a **horizontal** flexbox (`display: flex`, `flex-direction: row`). This arranges its children (the three columns) side-by-side.
+3.  **Fixed-Width Sidebars:**
+    * `.sidebar-a` and `.sidebar-b` use `flex: 0 0 200px;`.
+    * This is shorthand for: `flex-grow: 0` (don't grow), `flex-shrink: 0` (don't shrink), `flex-basis: 200px` (start at this width). This locks them at 200px.
+4.  **Fluid Main Content:**
+    * `.main-content` uses `flex: 1;`.
+    * This is shorthand for `flex-grow: 1`. It tells this element to "grow" and fill all remaining empty space in the flex container.
+
+# HTML/CSS Code Explanation: Exercise 4
+
+This document breaks down the provided HTML/CSS code, explaining its purpose and implementation.
+
+---
+
+## Exercise 4: Responsive 2-Column Page
+
+### What is it?
+This is a complete, styled webpage for a fictional "San Joaquin Valley Town Hall" event. It features a header (with a logo and tagline), a two-column main body (a wide content area on the left and a narrower sidebar on the right), and a footer. Most importantly, it is **responsive**, meaning its layout automatically adapts to different screen sizes, like mobile phones.
+
+### Why was it built this way?
+This code demonstrates a practical and modern approach to web layout using **CSS Flexbox** and **responsive design principles**. The goals are twofold:
+1.  **Desktop View:** To create a visually appealing, proportional 2-column layout where the main content is wider than the sidebar, making it easy to read.
+2.  **Mobile View:** To ensure the site is usable on small screens by "stacking" the two columns into a single vertical column, preventing users from having to zoom or scroll horizontally.
+
+### How does it work?
+1.  **Flexbox for Layout:** The `.main-content` element is set to `display: flex`. This turns it into a flex container, allowing its direct children (`.left-column` and `.right-column`) to be arranged side-by-side.
+
+2.  **Proportional Columns:**
+    * The `.left-column` has `flex: 2;`.
+    * The `.right-column` has `flex: 1;`.
+    * This is the core of the layout. It divides the available horizontal space into 3 "parts" (2 + 1). The left column is given 2 parts (two-thirds of the width), and the right column is given 1 part (one-third of the width). This creates a proportional
+
