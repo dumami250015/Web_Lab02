@@ -23,7 +23,6 @@ This code uses the **Bootstrap** CSS framework. The "why" is to build a clean, r
 4.  **Custom Styling:** A small `<style>` tag is used to add custom styles not covered by Bootstrap, like setting the logo width and changing the heading colors to `#1e9690`.
 
 <details>
-<summary>Click to see Ex2 Source Code</summary>
 
 ```html
 <!DOCTYPE html>
