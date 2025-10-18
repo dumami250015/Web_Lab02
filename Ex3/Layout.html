@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5ddb8;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 1000px;
+            background-color: #f5ddb8;
+            border: 3px solid #d4a574;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .header {
+            background-color: #ffffff;
+            border: 2px solid #c4b89f;
+            padding: 20px;
+            margin-bottom: 0;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 0;
+            min-height: 400px;
+        }
+
+        .sidebar-a {
+            flex: 0 0 200px;
+            background-color: #f9f9f9;
+            border: 2px solid #c4b89f;
+            border-top: none;
+            padding: 20px;
+        }
+
+        .main-content {
+            flex: 1;
+            background-color: #ffffff;
+            border-top: 2px solid #c4b89f;
+            border-bottom: 2px solid #c4b89f;
+            padding: 20px;
+        }
+
+        .sidebar-b {
+            flex: 0 0 200px;
+            background-color: #f9f9f9;
+            border: 2px solid #c4b89f;
+            border-top: none;
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: #ffffff;
+            border: 2px solid #c4b89f;
+            border-top: none;
+            padding: 20px;
+        }
+
+        .sidebar-a h2, .main-content h2, .sidebar-b h2, .footer h2 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Header</h1>
+        </header>
+        
+        <div class="content-wrapper">
+            <aside class="sidebar-a">
+                <h2>Sidebar A</h2>
+            </aside>
+            
+            <main class="main-content">
+                <h2>Main content</h2>
+            </main>
+            
+            <aside class="sidebar-b">
+                <h2>Sidebar B</h2>
+            </aside>
+        </div>
+        
+        <footer class="footer">
+            <h2>Footer</h2>
+        </footer>
+    </div>
+</body>
+</html>
